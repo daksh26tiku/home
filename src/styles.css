@@ -1,3 +1,39 @@
+/* Footer styles */
+.site-footer {
+    position: absolute;
+    bottom: 100px;
+    right: 40px;
+    z-index: 100;
+    background: rgba(40,40,40,0.18);
+    color: #e0e0e0;
+    font-size: 1.4rem;
+    font-family: inherit;
+    border-radius: 6px;
+    box-shadow: none;
+    padding: 6px 16px;
+    text-align: right;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    min-width: 160px;
+    pointer-events: none;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+/* Make LeetCode card image show pointer cursor on hover */
+.leetcode-card a:hover img {
+    cursor: pointer;
+}
+.cs-dialog.socials-dialog .leetcode-card a:hover img {
+  opacity: 0.9;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
 #intro-overlay {
     position: fixed;
     top: 0;
@@ -118,10 +154,17 @@ body {
 
 .cs-dialog.options-dialog {
     max-width: 690px;
+    max-height: 90vh;
+}
+
+.cs-dialog.options-dialog .content {
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
 }
 
 .cs-dialog.new-game-dialog {
     width: 600px;
+    max-height: 90vh;
 
     .cs-select {
         line-height: 18px;
@@ -145,12 +188,19 @@ body {
             color: var(--accent);
         }
     }
+
+    .content {
+        max-height: calc(90vh - 120px);
+        overflow-y: auto;
+    }
 }
 
 .cs-dialog {
     font-size: 23px;
     transform: scale(1.15);
     transform-origin: center;
+    max-height: 90vh;
+    max-width: 95vw;
 }
 
 .cs-dialog .heading .text {
@@ -256,6 +306,12 @@ body {
 .servers-dialog.cs-dialog {
     max-width: 900px;
     width: 900px;
+    max-height: 90vh;
+}
+
+.servers-dialog.cs-dialog .content {
+    max-height: calc(90vh - 80px);
+    overflow-y: auto;
 }
 
 .servers-dialog.cs-dialog .cs-tabs .panel {
@@ -364,10 +420,13 @@ body {
 
     .cs-dialog {
         transform: scale(1.08);
+        max-height: 90vh;
+        max-width: 95vw;
     }
 
     .cs-dialog.options-dialog {
         max-width: 650px;
+        max-height: 90vh;
     }
 }
 
@@ -386,7 +445,8 @@ body {
         margin: 10px 0;
     }
 
-    .player-name-section, .city-section {
+    .player-name-section,
+    .city-section {
         width: 200px;
     }
 
@@ -397,14 +457,18 @@ body {
     .cs-dialog {
         transform: scale(1);
         font-size: 20px;
+        max-height: 90vh;
+        max-width: 95vw;
     }
 
     .cs-dialog.options-dialog {
         max-width: 600px;
+        max-height: 90vh;
     }
-    
+
     .cs-dialog.servers-dialog {
         width: 90%;
+        max-height: 90vh;
     }
 
     .cs-dialog .heading .text,
@@ -421,16 +485,24 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .cs-dialog {
+        max-height: 90vh;
+        max-width: 95vw;
+    }
+
     .cs-dialog.options-dialog {
         width: 360px;
+        max-height: 90vh;
     }
-    
+
     .cs-dialog.servers-dialog {
         width: 95%;
+        max-height: 90vh;
     }
 
     .cs-dialog.new-game-dialog {
         width: 95%;
+        max-height: 90vh;
     }
 
     .server-browser {
@@ -467,5 +539,337 @@ body {
         align-items: flex-start;
         margin-top: 30px;
         width: 300px;
+    }
+}
+
+.cs-dialog.socials-dialog {
+    max-width: 1000px;
+    /* Increased to fit all 5 posters */
+    width: 1000px;
+    max-height: 90vh;
+}
+
+.cs-dialog.socials-dialog .content {
+    max-height: calc(90vh - 120px);
+    overflow-x: visible;
+    /* Allow horizontal overflow to show all posters */
+}
+
+.cs-dialog.socials-dialog .socials-content {
+    padding: 10px 0;
+}
+
+.cs-dialog.socials-dialog .social-section {
+    margin-bottom: 30px;
+}
+
+.cs-dialog.socials-dialog .social-section:last-child {
+    margin-bottom: 0;
+}
+
+.cs-dialog.socials-dialog .leetcode-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+.cs-dialog.socials-dialog .leetcode-card
+{
+    flex: 0 0 50%;
+    max-width: 370px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: auto;
+    height: 430px; /* Adjust as needed to match Instagram embed */
+}
+.cs-dialog.socials-dialog .instagram-embed {
+    flex: 0 0 50%;
+    max-width: 370px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: auto;
+    height: 430px; /* Adjust as needed to match Instagram embed */
+}
+
+.cs-dialog.socials-dialog .leetcode-card img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cs-dialog.socials-dialog .instagram-embed blockquote {
+    height: 100% !important;
+    max-height: 420px !important;
+}
+
+
+.cs-dialog.socials-dialog .social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cs-dialog.socials-dialog .social-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: var(--secondary-bg, #2a2a2a);
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.cs-dialog.socials-dialog .social-icon-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.cs-dialog.socials-dialog .social-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.cs-dialog.socials-dialog .social-icon {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: contrast(1.2) brightness(0.9);
+}
+
+.cs-dialog.socials-dialog .social-icon.pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.cs-dialog.socials-dialog .instagram-embed {
+    width: 100%;
+    max-width: 100px;
+    /* tweak this */
+    /* margin: 0 0; */
+}
+
+.cs-dialog.socials-dialog .instagram-embed blockquote {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Dark mode Instagram embed */
+.cs-dialog.socials-dialog .instagram-dark {
+    background: #1a1a1a !important;
+    color: #fff !important;
+}
+
+.cs-dialog.socials-dialog .instagram-dark * {
+    color: #fff !important;
+}
+
+.cs-dialog.socials-dialog .instagram-dark a {
+    background: #1a1a1a !important;
+    color: #fff !important;
+}
+
+.cs-dialog.socials-dialog .instagram-dark div[style*="background-color: #F4F4F4"] {
+    background-color: #333 !important;
+}
+
+.cs-dialog.socials-dialog .instagram-dark div[style*="color:#3897f0"] {
+    color: #4a9eff !important;
+}
+
+.cs-dialog.socials-dialog .social-section h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.cs-dialog.socials-dialog iframe {
+    border-radius: 8px;
+}
+
+.cs-dialog.socials-dialog #letterboxd-embed-wrapper-tc {
+    width: 100%;
+    max-width: none;
+    /* Allow full width to display all posters */
+    overflow-x: visible;
+    /* Show all content without scrolling */
+    overflow-y: visible;
+    box-sizing: border-box;
+    /* Disable all animations and transitions */
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Only apply box-sizing, don't constrain width - let widget control its layout */
+/* Disable all animations and transitions on child elements */
+.cs-dialog.socials-dialog #letterboxd-embed-wrapper-tc * {
+    box-sizing: border-box;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Let images display at their natural size */
+.cs-dialog.socials-dialog #letterboxd-embed-wrapper-tc img {
+    height: auto;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    /* Don't constrain width - let images be their natural size */
+}
+
+/* Let tables and divs control their own layout */
+.cs-dialog.socials-dialog #letterboxd-embed-wrapper-tc table,
+.cs-dialog.socials-dialog #letterboxd-embed-wrapper-tc div {
+    /* Don't constrain - let the widget control its layout */
+    max-width: none;
+    /* Allow full width */
+    overflow-x: visible;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .cs-dialog.socials-dialog {
+        width: 95%;
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cs-dialog.socials-dialog {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .cs-dialog.socials-dialog .social-section iframe {
+        height: 300px !important;
+    }
+
+    .cs-dialog.socials-dialog #letterboxd-widget {
+        height: 400px !important;
+    }
+
+    /* Stack LeetCode card and links vertically on small screens */
+    /* .cs-dialog.socials-dialog .leetcode-container {
+        flex-direction: column;
+        gap: 15px;
+    } */
+
+    .cs-dialog.socials-dialog .social-icons-container {
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .cs-dialog.socials-dialog .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cs-dialog.socials-dialog .instagram-embed blockquote {
+        transform: scale(0.75) !important;
+        min-width: 180px !important;
+    }
+
+    .cs-dialog.socials-dialog .leetcode-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cs-dialog.socials-dialog .leetcode-card,
+    .cs-dialog.socials-dialog .instagram-embed {
+        flex: 0 0 100% !important;
+    }
+
+    .cs-dialog.socials-dialog .instagram-heading {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+}
+hr.cs-hr {
+    margin: 10px 0 !important; /* or your preferred smaller value */
+}
+
+/* Scoreboard Modal Styles */
+.scoreboard-dialog.cs-dialog {
+    transform: none !important;
+    max-height: 85vh;
+    overflow-y: auto;
+    max-width: 520px;
+    width: 90%;
+    font-size: 21px;
+    background: rgba(30, 30, 30, 0.98);
+    border: 2px solid #2a2a2a;
+    box-shadow: 0 0 24px 4px #000a;
+    /* margin-top: 48px;
+    padding-top: 18px;
+    box-sizing: border-box; */
+}
+
+.scoreboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(20, 20, 20, 0.95);
+    color: #e0e0e0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    margin: 0 auto;
+    box-shadow: 0 0 8px #0006;
+}
+.scoreboard-table th, .scoreboard-table td {
+    border: 1px solid #444;
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 17px;
+}
+.scoreboard-table td:last-child,
+.scoreboard-table th:last-child {
+    white-space: nowrap;
+}
+
+.scoreboard-table th {
+    background: #222;
+    color: #ffd700;
+    font-size: 21px;
+    letter-spacing: 0.04em;
+}
+.scoreboard-table tr {
+    transition: background 0.2s;
+}
+.scoreboard-table tr:hover {
+    background: #333a;
+}
+.scoreboard-table td {
+    font-size: 19px;
+}
+.scoreboard-table td:last-child {
+    color: #00ff00;
+    font-weight: bold;
+    text-align: right;
+}
+@media screen and (max-width: 800px) {
+    .scoreboard-dialog.cs-dialog {
+        width: 90vw;
+        max-width: 90vw;
+        font-size: 16px;
+    }
+
+    .scoreboard-table th,
+    .scoreboard-table td {
+        font-size: 14px;
+        padding: 5px 6px;
     }
 }

@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home | 🪜 roman mendaliev 🕳</title>
+    <title>daksh</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preload" href="images/intro.webm" as="video" type="video/webm" fetchpriority="high">
     <link rel="preload" href="images/background.png" as="image" fetchpriority="high">
     <link rel="preload" href="images/me1.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="images/me2.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="images/me3.jpg" as="image" fetchpriority="high">
+    <!-- <link rel="preload" href="images/me3.jpg" as="image" fetchpriority="high"> -->
     <link rel="preload" href="images/me4.jpg" as="image" fetchpriority="high">
     <link rel="preload" href="sounds/menu_click.wav" as="audio" type="audio/wav" fetchpriority="high">
     <link rel="preload" href="sounds/window_close.wav" as="audio" type="audio/wav" fetchpriority="high">
+    <link rel="preload" href="sounds/buttonrollover.wav" as="audio" type="audio/wav" fetchpriority="high">
+    <link rel="icon" type="image/png" href="images/snoopy.png">
 </head>
+
 <body>
     <div id="intro-overlay">
-        <video id="intro-video" autoplay muted playsinline aria-label="Classic Valve intro meshed with Dwayne Johnson eyebrow raise">
+        <video id="intro-video" autoplay muted playsinline
+            aria-label="Classic Valve intro meshed with Dwayne Johnson eyebrow raise">
             <source src="images/intro.webm" type="video/webm">
-            <p>Your browser doesn't support HTML video. This should be classic Valve intro meshed with Dwayne Johnson eyebrow raise.</p>
+            <p>Your browser doesn't support HTML video. This should be classic Valve intro meshed with Dwayne Johnson
+                eyebrow raise.</p>
         </video>
     </div>
-    
+
     <div class="container">
         <div class="menu">
             <a class="menu-item" data-section="new-game">New game</a>
             <a class="menu-item" data-section="find-servers">Find servers</a>
-            <a class="menu-item" data-section="options">Options</a>
-            <a class="menu-item" data-section="quit">Quit</a>
+                <a class="menu-item" data-section="scoreboard">Scoreboard</a>
+                <a class="menu-item" data-section="socials">Socials</a>
+                <a class="menu-item" data-section="options">Options</a>
+                <a class="menu-item" data-section="quit">Quit</a>
         </div>
     </div>
 
@@ -43,14 +51,7 @@
             </div>
             <div class="content">
                 <div class="cs-tabs">
-                    <input
-                        class="radiotab"
-                        name="tabs"
-                        tabindex="1"
-                        type="radio"
-                        id="tabone"
-                        checked
-                    />
+                    <input class="radiotab" name="tabs" tabindex="1" type="radio" id="tabone" checked />
                     <label class="label" for="tabone">Server</label>
                     <div class="panel" tabindex="1">
                         <div class="map-selector">
@@ -61,16 +62,18 @@
                         </div>
                         <hr class="cs-hr" />
                         <p class="text description">
-                            Hi, I'm Roman and this is my little portfolio and a tribute to the game I love.<br /><br />
-                            I started playing CS 1.6 when I was around 12 years old, and this game had me hooked.
-                            At some point, I even googled 'how to become a pro CS player' and read a sarcastic article that suggested
-                            eating only <a href="https://en.wikipedia.org/wiki/Butterbrot#Present-day_use" target="_blank">buterbrods</a>.<br />
-                            So as you can guess, I didn't end up as a CS pro. But I still ended up having so many happy hours playing this game and so many fond memories.
-                            Playing it will always feel like I'm 12 again - it's a sunny Saturday morning, no school, mom's doing laundry, and all I have to worry about is how to frag more.<br />
+                            Hi, I'm Daksh and this is my developer portfolio.<br />
                             <br />
-                            I hope this site brings you some nostalgia and maybe even makes you want to play CS 1.6 again.<br />
+                            I played a lot of CS when I was a kid, and this website is a tribute to it.
+                            Playing it always feels like home again - a carefree Saturday evening, no school, at my
+                            friend's house, and all we have to worry about is defusing the bomb.<br />
+                            Thank you Valve for so many fond memories, please just release Half-Life 3 already.
                             <br />
-                            You can find my basic info and contacts in the 'Options' window and my projects in 'Find servers'.
+                            I hope this site makes you cry over nostalgia and helps you get to know me a little
+                            better.<br />
+                            <br />
+                            You can find my basic info and contacts in the 'Options' window and my projects in 'Find
+                            servers'.
                         </p>
                     </div>
                 </div>
@@ -93,14 +96,7 @@
             </div>
             <div class="content options">
                 <div class="cs-tabs">
-                    <input
-                        class="radiotab"
-                        name="tabs"
-                        tabindex="1"
-                        type="radio"
-                        id="tabone"
-                        checked
-                    />
+                    <input class="radiotab" name="tabs" tabindex="1" type="radio" id="tabone" checked />
                     <label class="label" for="tabone">Multiplayer</label>
                     <div class="panel" tabindex="1">
                         <div class="sections">
@@ -108,7 +104,8 @@
                                 <div class="upper-left-column">
                                     <div class="player-name-section">
                                         <label for="player-name">Player name</label>
-                                        <input type="text" id="player-name" class="cs-input" readonly value="Roman Mendaliev">
+                                        <input type="text" id="player-name" class="cs-input" readonly
+                                            value="Dakshesh Prasad">
                                     </div>
                                     <div class="spraypaint-section">
                                         <label>Spraypaint image</label>
@@ -119,7 +116,7 @@
                                                     <select id="spraypaint-image" class="cs-select">
                                                         <option value="lambda" selected>lambda</option>
                                                         <option value="smiley">smiley</option>
-                                                        <option value="heart">heart</option>
+                                                        <!-- <option value="mirror">mirror</option> -->
                                                         <option value="kid">kid</option>
                                                     </select>
                                                 </div>
@@ -144,15 +141,15 @@
 @            i'm trying to <a class="build-smth-link cs-tooltip">build<span class="build-smth-tooltip-text text">View projects</span></a>              @
 @                             <a class="build-smth-link cs-tooltip">something<span class="build-smth-tooltip-text text">View projects</span></a>       @
 @                                                   @
-@     。 。  <a class="telegram-link" target="_blank" href="https://t.me/roman_building">telegram</a> (in russian)     @
+@     。 。  <a class="instagram" target="_blank" href="https://www.instagram.com/daksh.__._/">instagram</a>                    @
 @       ~                                          @
-@              ✉ roman @ asd.lol         @
+@   ✉ prasad.daksh24@gmail.com   @
 @                                                   @
 @@@@@@@@@@@@@@@@@@@</pre>
                                 </div>
                             </div>
                             <div class="age-and-city-row">
-                                <div class="age-section">   
+                                <div class="age-section">
                                     <div class="cs-slider">
                                         <div class="value">
                                             <p>0</p>
@@ -163,12 +160,14 @@
                                         <label for="age-range">Age</label>
                                     </div>
                                     <div class="age-input-row">
-                                        <input type="text" id="age-value" class="cs-input age-input" readonly value="25">
+                                        <input type="text" id="age-value" class="cs-input age-input" readonly
+                                            value="22">
                                     </div>
                                 </div>
                                 <div class="city-section">
                                     <label for="city">Location</label>
-                                    <input type="text" id="city" class="cs-input" readonly value="Saint-Petersburg, Russia">
+                                    <input type="text" id="city" class="cs-input" readonly
+                                        value="Darjeeling, India">
                                 </div>
                             </div>
                         </div>
@@ -213,14 +212,7 @@
             </div>
             <div class="content servers">
                 <div class="cs-tabs">
-                    <input
-                        class="radiotab"
-                        name="server-tabs"
-                        tabindex="1"
-                        type="radio"
-                        id="favorites-tab"
-                        checked
-                    />
+                    <input class="radiotab" name="server-tabs" tabindex="1" type="radio" id="favorites-tab" checked />
                     <label class="label" for="favorites-tab">Favorites</label>
                     <div class="panel" tabindex="1">
                         <div class="server-browser">
@@ -231,33 +223,42 @@
                                 <div class="project-status-column cs-btn">Status</div>
                             </div>
                             <div class="server-list">
-                                <div class="server-item" data-url="https://github.com/reacheight/codemagics">
-                                    <div class="project-name-column server-item-column">CodeMagics</div>
-                                    <div class="project-description-column server-item-column">CodeCombat-like game platform for kids to learn Python</div>
-                                    <div class="project-stack-column server-item-column">Node.js, React, JavaScript</div>
-                                    <div class="project-status-column server-item-column">Offline</div>
-                                </div>
-                                <div class="server-item" data-url="https://asd.lol">
-                                    <div class="project-name-column server-item-column">asd.lol</div>
-                                    <div class="project-description-column server-item-column">your second stimulation-addicted brain</div>
-                                    <div class="project-stack-column server-item-column">Svelte, TypeScript</div>
+                                <div class="server-item" data-url="https://daksh26tiku.github.io/KnowledgeGraph/">
+                                    <div class="project-name-column server-item-column">KnowledgeGraph</div>
+                                    <div class="project-description-column server-item-column">Russia-Ukraine conflict
+                                        related entities encoded visualized through an interactive web viewer</div>
+                                    <div class="project-stack-column server-item-column">HTML, Python
+                                    </div>
                                     <div class="project-status-column server-item-column">Live</div>
                                 </div>
-                                <div class="server-item" data-url="https://github.com/reacheight/wind">
-                                    <div class="project-name-column server-item-column">wind</div>
-                                    <div class="project-description-column server-item-column">Dota 2 match analyzer aimed at identifying gameplay mistakes</div>
-                                    <div class="project-stack-column server-item-column">Scala, React, TypeScript</div>
+                                <div class="server-item" data-url="https://nom-nom-lovat.vercel.app/">
+                                    <div class="project-name-column server-item-column">NomNom</div>
+                                    <div class="project-description-column server-item-column">your recipe sharing
+                                        social platform</div>
+                                    <div class="project-stack-column server-item-column">Node.js, React, TypeScript
+                                    </div>
+                                    <div class="project-status-column server-item-column">Live</div>
+                                </div>
+                                <div class="server-item" data-url="https://github.com/daksh26tiku/RealEstate">
+                                    <div class="project-name-column server-item-column">RealEstate</div>
+                                    <div class="project-description-column server-item-column">A real estate marketplace
+                                        platform for property listings, sales, and rentals</div>
+                                    <div class="project-stack-column server-item-column">Node.js, React, JavaScript
+                                    </div>
                                     <div class="project-status-column server-item-column">Offline</div>
                                 </div>
-                                <div class="server-item" data-url="https://github.com/reacheight/twitch-mal-profile">
-                                    <div class="project-name-column server-item-column">MAL profile</div>
-                                    <div class="project-description-column server-item-column">Twitch extension that displays MyAnimeList profiles under the stream player</div>
+                                <div class="server-item" data-url="https://cine-booker.vercel.app/">
+                                    <div class="project-name-column server-item-column">CineDesk</div>
+                                    <div class="project-description-column server-item-column">Cinema seat booking
+                                        platform</div>
                                     <div class="project-stack-column server-item-column">React, JavaScript</div>
                                     <div class="project-status-column server-item-column">Live</div>
                                 </div>
-                                <div class="server-item" data-url="https://github.com/reacheight/home">
+                                <div class="server-item" data-url="https://github.com/daksh26tiku/home">
                                     <div class="project-name-column server-item-column">home</div>
-                                    <div class="project-description-column server-item-column">Personal website and my little tribute to Counter-Strike 1.6</div>
+                                    <div class="project-description-column server-item-column">CS 1.6 themed
+                                        personal website
+                                    </div>
                                     <div class="project-stack-column server-item-column">HTML, CSS, JavaScript</div>
                                     <div class="project-status-column server-item-column">Live</div>
                                 </div>
@@ -273,6 +274,273 @@
         </form>
     </dialog>
 
+    <dialog class="cs-dialog socials-dialog" id="socials-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Socials</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content">
+                <div class="cs-tabs">
+                    <input class="radiotab" name="socials-tabs" tabindex="1" type="radio" id="socials-tab" checked />
+                    <label class="label" for="socials-tab">Links</label>
+                    <div class="panel" tabindex="1">
+                        <div class="socials-content">
+                            <!-- LeetCode Section -->
+                            <div class="social-section">
+                                <div
+                                    style="width: 100%; display: flex; flex-direction: row; align-items: flex-start; gap: 20px; margin-bottom: 10px;">
+                                    <h3 style="font-size: 20px; color: #fff; margin-bottom: 0; flex: 1;">LeetCode</h3>
+                                    <h3 class="instagram-heading"
+                                        style="font-size: 20px; color: #fff; margin-bottom: 0; flex: 1;">Instagram</h3>
+                                </div>
+                                <div class="leetcode-container"
+                                    style="display: flex; gap: 20px; align-items: flex-start;">
+                                    <div class="leetcode-card" style="flex: 0 0 50%;">
+                                        <a href="https://leetcode.com/u/_daksh_/" target="_blank" rel="noopener"
+                                            style="cursor: pointer">
+                                            <img src="https://leetcard.jacoblin.cool/_daksh_?theme=dark&font=Roboto%20Mono&ext=contest"
+                                                alt="LeetCode Card" style="width: 100%; height: auto;">
+                                        </a>
+                                    </div>
+                                    <div class="instagram-embed" style="flex: 0 0 50%; width: 100%; max-width: 100%;">
+                                        <blockquote class="instagram-media instagram-dark"
+                                            data-instgrm-permalink="https://www.instagram.com/daksh.__._/"
+                                            data-instgrm-version="14"
+                                            style="background:#1a1a1a; border:0; border-radius:3px; margin:0; width:100%;">
+                                            <div style="padding:16px;"> <a href="https://www.instagram.com/daksh.__._/"
+                                                    style=" background:#1a1a1a; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                                    target="_blank">
+                                                    <div
+                                                        style=" display: flex; flex-direction: row; align-items: center;">
+                                                        <div
+                                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                                        </div>
+                                                        <div
+                                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                                            <div
+                                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                                            </div>
+                                                            <div
+                                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="padding: 19% 0;"></div>
+                                                    <div
+                                                        style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                                        <svg width="50px" height="50px" viewBox="0 0 60 60"
+                                                            version="1.1" xmlns="https://www.w3.org/2000/svg"
+                                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                                            <g stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g transform="translate(-511.000000, -20.000000)"
+                                                                    fill="#000000">
+                                                                    <g>
+                                                                        <path
+                                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                                        </path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <div style="padding-top: 8px;">
+                                                        <div
+                                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                                            View this profile on Instagram</div>
+                                                    </div>
+                                                    <div style="padding: 12.5% 0;"></div>
+                                                    <div
+                                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                                        <div>
+                                                            <div
+                                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                                            </div>
+                                                            <div
+                                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                                            </div>
+                                                            <div
+                                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                                            </div>
+                                                        </div>
+                                                        <div style="margin-left: 8px;">
+                                                            <div
+                                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                                            </div>
+                                                            <div
+                                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                                            </div>
+                                                        </div>
+                                                        <div style="margin-left: auto;">
+                                                            <div
+                                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                                            </div>
+                                                            <div
+                                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                                            </div>
+                                                            <div
+                                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                                        <div
+                                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                                        </div>
+                                                        <div
+                                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                                        </div>
+                                                    </div>
+                                                </a></div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="cs-hr" style="margin: 30px 0;" />
+
+                        <!-- Spotify Section -->
+                        <div class="social-section">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: #fff;">Music</h3>
+                            <p class="text description" style="margin-bottom: 15px;">
+                                Music that keeps me sane. Here's one of my playlists.
+                            </p>
+                            <div style="margin-bottom: 15px;">
+                                <!-- Replace YOUR_SPOTIFY_PLAYLIST_ID with your actual playlist ID -->
+                                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/playlist/7noqDOfC0hRA9O1qhT0RhJ?utm_source=generator&theme=0"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <hr class="cs-hr" style="margin: 30px 0;" />
+
+                        <!-- Letterboxd Section -->
+                        <div class="social-section">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: #fff;">Movies</h3>
+                            <p class="text description" style="margin-bottom: 15px;">
+                                Films that moved me, made me think, or just entertained me. Here's what I've been
+                                watching.
+                            </p>
+                            <div
+                                style="margin-bottom: 15px; width: 100%; overflow-x: auto; overflow-y: visible; -webkit-overflow-scrolling: touch;">
+                                <!-- Replace YOUR_LETTERBOXD_USERNAME with your actual Letterboxd username -->
+                                <div id="letterboxd-embed-wrapper-tc" style="width: 100%;">Loading...</div>
+                                <script>
+                                    fetch('https://letterboxd-embed.suyog999sg.workers.dev?username=daksh_')
+                                        .then(response => response.text())
+                                        .then(data => {
+                                            const wrapper = document.getElementById('letterboxd-embed-wrapper-tc');
+                                            wrapper.innerHTML = data;
+                                            // Disable all animations and transitions on all elements
+                                            const allElements = wrapper.querySelectorAll('*');
+                                            allElements.forEach(el => {
+                                                el.style.boxSizing = 'border-box';
+                                                el.style.animation = 'none';
+                                                el.style.transition = 'none';
+                                                el.style.transform = 'none';
+                                                // Don't apply max-width - let the widget control its layout
+                                            });
+                                        });
+                                </script>
+                            </div>
+                        </div>
+
+                        <!-- Social Icons Container -->
+                        <div class="social-icons-container"
+                            style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; padding: 15px; background-color: var(--secondary-bg, #2a2a2a); border-radius: 3px;">
+                            <a href="https://github.com/daksh26tiku" target="_blank" class="social-icon-link">
+                                <img src="images/github.png" alt="GitHub" class="social-icon pixelated">
+                            </a>
+                            <a href="https://www.linkedin.com/in/dakshesh-prasad-6ab8a7327/" target="_blank"
+                                class="social-icon-link">
+                                <img src="images/linkedin.png" alt="LinkedIn" class="social-icon pixelated">
+                            </a>
+                            <a href="https://leetcode.com/u/_daksh_/" target="_blank" class="social-icon-link">
+                                <img src="images/leetcode.png" alt="LeetCode" class="social-icon pixelated">
+                            </a>
+                            <a href="https://www.behance.net/dakshprasad" target="_blank" class="social-icon-link">
+                                <img src="images/behance.png" alt="Behance" class="social-icon pixelated">
+                            </a>
+                            <a href="https://open.spotify.com/user/5mpyt7ktl66o4npakkq2ol4eh" target="_blank"
+                                class="social-icon-link">
+                                <img src="images/spotify.png" alt="Spotify" class="social-icon pixelated">
+                            </a>
+                            <a href="https://letterboxd.com/daksh_/" target="_blank" class="social-icon-link">
+                                <img src="images/letterboxd.png" alt="Letterboxd" class="social-icon pixelated">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="cs-dialog scoreboard-dialog" id="scoreboard-dialog">
+        <form method="dialog">
+            <div class="heading">
+                <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Scoreboard</p>
+                </div>
+                <button class="cs-btn close"></button>
+            </div>
+            <div class="content">
+                <table class="scoreboard-table">
+                    <thead>
+                        <tr>
+                            <th>Skill/Tool</th>
+                            <th>Type</th>
+                            <th>Ping</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>C++</td><td>Language</td><td>12 ms</td></tr>
+                        <tr><td>C</td><td>Language</td><td>15 ms</td></tr>
+                        <tr><td>Java</td><td>Language</td><td>18 ms</td></tr>
+                        <tr><td>JavaScript</td><td>Language</td><td>10 ms</td></tr>
+                        <tr><td>Python</td><td>Language</td><td>9 ms</td></tr>
+                        <tr><td>React.js</td><td>Framework</td><td>14 ms</td></tr>
+                        <tr><td>Express.js</td><td>Framework</td><td>16 ms</td></tr>
+                        <tr><td>Node.js</td><td>Framework</td><td>13 ms</td></tr>
+                        <tr><td>REST APIs</td><td>Technology</td><td>11 ms</td></tr>
+                        <tr><td>HTML/CSS</td><td>Technology</td><td>8 ms</td></tr>
+                        <tr><td>Tailwind CSS</td><td>Technology</td><td>17 ms</td></tr>
+                        <tr><td>Git</td><td>Tool</td><td>7 ms</td></tr>
+                        <tr><td>MySQL</td><td>Database</td><td>19 ms</td></tr>
+                        <tr><td>MongoDB</td><td>Database</td><td>20 ms</td></tr>
+                        <tr><td>Data Structures & Algorithms</td><td>Problem Solving</td><td>10 ms</td></tr>
+                        <tr><td>Linux</td><td>OS</td><td>13 ms</td></tr>
+                        <tr><td>Windows</td><td>OS</td><td>14 ms</td></tr>
+                        <tr><td>VS Code</td><td>Dev Tool</td><td>6 ms</td></tr>
+                        <tr><td>GitHub</td><td>Dev Tool</td><td>7 ms</td></tr>
+                        <tr><td>Docker</td><td>Dev Tool</td><td>18 ms</td></tr>
+                        <tr><td>Kubernetes</td><td>Dev Tool</td><td>22 ms</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>© 2025 daksh</span>
+            <span style="font-size: 1.1rem; opacity: 0.7;">Last updated Dec 29, 2025</span>
+        </div>
+    </footer>
     <script src="script.js"></script>
+    <script async src="//platform.instagram.com/en_US/embeds.js"></script>
 </body>
+
 </html>

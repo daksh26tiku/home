@@ -42,7 +42,6 @@ function initOptionsDialog() {
     dialog.querySelector('#options-ok').addEventListener('click', function() {
         dialog.close();
     });
-    
     dialog.querySelector('#options-cancel').addEventListener('click', function() {
         dialog.close();
     });
@@ -82,7 +81,7 @@ function initQuitDialog() {
     if (!dialog) return null;
     
     dialog.querySelector('#confirm-quit').addEventListener('click', function() {
-        window.location.href = 'https://github.com/reacheight';
+        window.location.href = 'https://github.com/daksh26tiku';
     });
     
     dialog.querySelector('#quit-cancel').addEventListener('click', function() {
@@ -159,11 +158,24 @@ function initServersDialog() {
     return dialog;
 }
 
+function initSocialsDialog() {
+    const dialog = document.getElementById('socials-dialog');
+    if (!dialog) return null;
+    
+    dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+    });
+    
+    return dialog;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const newGame = initNewGameDialog();
     const optionsDialog = initOptionsDialog();
     const quitDialog = initQuitDialog();
     const serversDialog = initServersDialog();
+    const socialsDialog = initSocialsDialog();
+    const scoreboardDialog = document.getElementById('scoreboard-dialog');
 
     const introOverlay = document.getElementById('intro-overlay');
     introOverlay.addEventListener('transitionend', () => {
@@ -177,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const menuClickSound = new Audio('sounds/menu_click.wav');
     const menuCloseSound = new Audio('sounds/window_close.wav');
+    const menuHoverSound = new Audio('sounds/buttonrollover.wav');
 
     document.querySelectorAll('.cs-dialog .close').forEach(closeBtn => {
         closeBtn.addEventListener('click', () => {
@@ -202,6 +215,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            menuHoverSound.currentTime = 0;
+            menuHoverSound.play().catch(() => {
+                // Ignore errors if audio can't play (e.g., user hasn't interacted with page yet)
+            });
+        });
+
         item.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -220,8 +240,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'find-servers':
                     if (serversDialog) serversDialog.showModal();
                     break;
+                case 'socials':
+                    if (socialsDialog) socialsDialog.showModal();
+                    break;
                 case 'quit':
                     if (quitDialog) quitDialog.showModal();
+                    break;
+                case 'scoreboard':
+                    if (scoreboardDialog) scoreboardDialog.showModal();
                     break;
                 default:
                     break;
